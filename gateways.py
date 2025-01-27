@@ -16,9 +16,6 @@ responsejson = json.loads(response.text)
 
 for item in responsejson['resultList']:
   
-  if(item['gatewayId'] == "7276ff0039070404"):
-    print("Hold øje")
-
   if ("silenced_until" in item['tags']):
     silenced_until = datetime.strptime(item['tags']['silenced_until'], "%d-%m-%yT%H:%M:%S")
   else:
